@@ -14,6 +14,8 @@
     </div>
     <h1>Test</h1>
     <p>Test</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
     <p>Test</p>
     <p>Test</p>
     <p>Test</p>
@@ -26,5 +28,13 @@
     <p>Test</p>
     <p>Test</p>
     <div class="parallax-third"></div>
+
+    <script>
+        function myFunction() {
+          var w = window.innerWidth;
+          var h = window.innerHeight;
+          document.getElementById("demo").innerHTML = "Width: " + w + "<br>Height: " + h;
+        }
+        </script>
 </body>
 </html>
