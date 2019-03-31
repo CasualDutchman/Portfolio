@@ -1,39 +1,82 @@
-body, html{
+html{
+    height: 100%;
+}
+body{
     margin: 0;
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em !important;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 .parallax-header{
     background-image: url("../images/frontpage/header_image.jpg");
     min-height: 100%;
+    box-shadow: 0 5px 10px 5px grey;
 }
 .parallax-second{
     background-image: url("../images/frontpage/second_image.png");
     min-height: 500px;
+    box-shadow: 0 5px 10px 5px grey;
 }
 .parallax-third{
     background-image: url("../images/frontpage/third_image.png");
     min-height: 500px;
+    box-shadow: 0 5px 10px 5px grey;
 }
-.parallax-header, .parallax-second, .parallax-third {         
+.parallax-header, .parallax-second, .parallax-third{         
     position: relative;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.box-text{
-    background-color: white;
-    color: black;
-    font-size: 5vw; 
-    font-weight: bold;
-    margin: 0 auto;
-    padding: 10px;
-    width: 50%;
-    text-align: center;
+@media (max-width: 988px){
+    .parallax-header, .parallax-second, .parallax-third{
+        background-attachment: scroll;
+    }
+}
+.header-center{
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 50%;
     transform: translate(-50%, -50%);
+}
+.parallax-header .header-center{
     mix-blend-mode: screen;
+}
+.box-text{
+    background-color: white;
+    font-size: 5vw;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+.header-sub{
+    margin:20px;
+    font-size: 2vw;
+    color:rgba(231, 231, 231, 0.87);
+    text-align: center;
+}
+.content-center{
+    width: 100vw;
+    max-height: 800px;
+    display: flex;
+    align-items: center;
+}
+.content-center .container{
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
